@@ -1,237 +1,277 @@
 :root {
-    --color-primary: #2584ff;
-    --color-secondary: #00d9ff;
-    --color-accent: #ff3400;
-    --color-headings: #1b0760;
-    --color-body: #918ca4;
+  --color-primary: #2584ff;
+  --color-secondary: #00d9ff;
+  --color-accent: #ff3400;
+  --color-headings: #1b0760;
+  --color-body: #918ca4;
+  --color-border: #ccc;
+  --border-radius: 30px;
 }
 
-*, *::after, *::before {
-   box-sizing: border-box; 
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
 
 /*Typography*/
 html {
-    font-size: 82.5%;
+  font-size: 82.5%;
 }
 
 body {
-    font-family: Inter, Arial, Helvetica, sans-serif;
-    font-size: 2.4rem;
-    line-height: 1.5;
-    color: var(--color-body);
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 2.4rem;
+  line-height: 1.5;
+  color: var(--color-body);
 }
 
-h1, h2, h3 {
-    color: var(--color-headings);
-    margin-bottom: 1rem;
+h1,
+h2,
+h3 {
+  color: var(--color-headings);
+  margin-bottom: 1rem;
 }
 
 h1 {
-    font-size: 7rem;
+  font-size: 7rem;
 }
 
 h2 {
-    font-size: 4rem;
+  font-size: 4rem;
 }
 
 h3 {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
 p {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 @media screen and (min-width: 1024px) {
-    body {
-        font-size: 1.8rem;
-    }
+  body {
+    font-size: 1.8rem;
+  }
 
-    h1 {
-        font-size: 8rem;
-    }
+  h1 {
+    font-size: 8rem;
+  }
 
-    h2 {
-        font-size: 4rem;
-    }
+  h2 {
+    font-size: 4rem;
+  }
 
-    h3 {
-        font-size: 2.4rem;
-    }
+  h3 {
+    font-size: 2.4rem;
+  }
 }
 
 /*Links*/
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .link-arrow {
-    color: var(--color-accent);
-    text-transform: uppercase;
-    font-size: 2rem;
-    font-weight: bold;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .link-arrow::after {
-    content: '-->';
-    margin-left: 5px;
-    transition: margin 0.15s;
+  content: "-->";
+  margin-left: 5px;
+  transition: margin 0.15s;
 }
 
 .link-arrow:hover::after {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 @media screen and (min-width: 1024px) {
-    .link-arrow {
-        font-size: 1.5rem;
-    }
+  .link-arrow {
+    font-size: 1.5rem;
+  }
 }
 
 /*Badges*/
 .badge {
-    border-radius: 20px;
-    padding: 0.5rem 2rem;
-    font-weight: 600;
-    white-space: nowrap;
-    font-size: 2rem;
+  border-radius: 20px;
+  padding: 0.5rem 2rem;
+  font-weight: 600;
+  white-space: nowrap;
+  font-size: 2rem;
 }
 
 .badge--primary {
-    background: var(--color-primary);
-    color: white;
+  background: var(--color-primary);
+  color: white;
 }
 
 .badge--secondary {
-    background: var(--color-secondary);
-    color: white;
+  background: var(--color-secondary);
+  color: white;
 }
 
 .badge--small {
-    font-size: 1.6rem;
+  font-size: 1.6rem;
 }
 
 @media screen and (min-width: 1024px) {
-    .badge {
-        font-size: 1.5rem;
-    }
+  .badge {
+    font-size: 1.5rem;
+  }
 
-    .badge--small {
-        font-size: 1.2rem;
-    }
+  .badge--small {
+    font-size: 1.2rem;
+  }
 }
 
 /*Lists*/
 .list {
-    list-style: none;
-    padding-left: 0;
-    color: var(--color-headings);
+  list-style: none;
+  padding-left: 0;
+  color: var(--color-headings);
 }
 
 .list--inline .list__item {
-    display: inline-block;
-    margin-right: 2rem;
+  display: inline-block;
+  margin-right: 2rem;
 }
 
 .list--tick {
-    list-style-image: url(../images/tick3.svg);
-    padding-left: 3rem;
-
+  list-style-image: url(../images/tick3.svg);
+  padding-left: 3rem;
 }
 
 .list--tick .list__item {
-    margin-left: 0.5rem;
-    margin-bottom: 1rem;
-    padding-left: 0.5rem;
+  margin-left: 0.5rem;
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
 }
 
 @media screen and (min-width: 1024px) {
-    .list--tick .list__item {
-        padding-left: 0.3rem;
-    }
+  .list--tick .list__item {
+    padding-left: 0.3rem;
+  }
 }
 
 /*Icons*/
 .icon {
-    width: 40px;
-    height: 40px;
+  width: 40px;
+  height: 40px;
 }
 
 .icon--primary {
-    fill: var(--color-primary);
+  fill: var(--color-primary);
 }
 
 .icon-containor {
-    background: #f3f9fa;
-    width: 64px;
-    height: 64px;
-    border-radius: 100%;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+  background: #f3f9fa;
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*Buttons*/
 .btn {
-    font-size: 1.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    padding: 2rem 3rem;
-    border: 0;
-    border-radius: 40px;
-    cursor: pointer;
-    white-space: nowrap;
-    margin: 1rem 0;
-    text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 2rem 3rem;
+  border: 0;
+  border-radius: 40px;
+  cursor: pointer;
+  white-space: nowrap;
+  margin: 1rem 0;
+  text-align: center;
 }
 
 .btn--primary {
-    background: var(--color-primary);
-    color: white;
+  background: var(--color-primary);
+  color: white;
 }
 
 .btn--primary:hover {
-    background: #3a8ffd;
+  background: #3a8ffd;
 }
 
 .btn--secondary {
-    background: var(--color-secondary);
-    color: white;
+  background: var(--color-secondary);
+  color: white;
 }
 
 .btn--secondary:hover {
-    background: #00c8eb;
+  background: #00c8eb;
 }
 
 .btn--accent {
-    background: var(--color-accent);
-    color: white;
+  background: var(--color-accent);
+  color: white;
 }
 
 .btn--accent:hover {
-    background: #ec3000;
+  background: #ec3000;
 }
 
 .btn--outline {
-    background: white;
-    color: var(--color-headings);
-    border: 2px solid var(--color-headings);
+  background: white;
+  color: var(--color-headings);
+  border: 2px solid var(--color-headings);
 }
 
 .btn--outline:hover {
-    background: var(--color-headings);
-    color: white;
+  background: var(--color-headings);
+  color: white;
 }
 
 .btn--block {
-    width: 100%;
-    display: inline-block;
-
+  width: 100%;
+  display: inline-block;
 }
 
 @media screen and (min-width: 1024px) {
-    .btn {
-        font-size: 1.5rem;
-    }
+  .btn {
+    font-size: 1.5rem;
+  }
+}
+
+/*Inputs*/
+.input {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  color: var(--color-headings);
+  font-size: 2rem;
+  outline: 0;
+  padding: 1.5rem 3.5rem;
+}
+
+::placeholder {
+  color: #cdcbd7;
+}
+
+.input-group {
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  display: flex;
+}
+
+.input-group .input {
+  border: 0;
+  flex-grow: 1;
+  padding: 1.5rem 1rem;
+}
+
+.input-group .btn {
+  margin: 4px;
+}
+
+@media screen and (min-width: 2024px) {
+  .input {
+    font-size: 1.5rem;
+  }
 }
